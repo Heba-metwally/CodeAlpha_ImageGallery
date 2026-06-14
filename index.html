@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>My Image Gallery</h1>
+
     <div class="Gallery">
-        <img src="images/img_3.jpg" id="firstImg" alt="Gallery Image">
-        <button class="prev" id="prevBtn">Prev</button>
-        <button class="next" id="nextBtn">Next</button>
+        <img src="images/img_4.jpg" id="firstImg" alt="Gallery Image">
+        <div class="dots" id="dots"></div>
+        <button class="prev" id="prevBtn">   
+             <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next" id="nextBtn">   
+             <i class="fa-solid fa-chevron-right"></i>
+        </button>
     </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" id="closeLightbox"></span>
+        <img class="lightbox-content" id="lightboxImg" alt="Enlarged View">
+    </div>
+
+    <div class="category-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="products">Products</button>
+        <button class="filter-btn" data-category="others">Others</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
