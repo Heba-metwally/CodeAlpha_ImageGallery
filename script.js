@@ -1,18 +1,19 @@
 const allImages = [
-    { src: "images/img_4.jpg", category: "others" },
-    { src: "images/1.png", category: "others" },
-    { src: "images/portfolio-2.jpg", category: "others" }, 
-    { src: "images/img_1.jpg", category: "others" },
-    { src: "images/2.png", category: "others" },
-    { src: "images/product4.jpg", category: "products" },
-    { src: "images/back.jpg", category: "others" },
-    { src: "images/services.jpg", category: "others" },
-    { src: "images/product2.png", category: "products" },
-    { src: "images/3.png", category: "others" },
-    { src: "images/product1.jpg", category: "products" },
-    { src: "images/img_6.jpg", category: "others" },
-    { src: "images/product6,8.jpg", category: "products" },
-    { src: "images/startegy.jpg", category: "others" }
+    { src: "images/img_4.jpg", category: "others",caption:"details matter"},
+    { src: "images/1.png", category: "others",caption:"getting things done together"},
+    { src: "images/portfolio-2.jpg", category: "others",caption:"another day, another deadline"},
+    { src: "images/img_1.jpg", category: "others",caption:"grown slowly, shaped with patience"},
+    { src: "images/2.png", category: "others",caption:"Code & Collaborate"},
+    { src: "images/product4.jpg", category: "products",caption:"first thing of the day"},
+    { src: "images/back.jpg", category: "others",caption:"best hours are the late ones"},
+    { src: "images/services.jpg", category: "others",caption:"somewhere cold, somewhere quiet"},
+    { src: "images/product2.png", category: "products",caption:"bubble tea"},
+    { src: "images/3.png", category: "others",caption:"designing"},
+    { src: "images/product1.jpg", category: "products",caption:"Morning Routine"},
+    { src: "images/img_6.jpg", category: "others",caption:"she got to the coffee before me"},
+    { src: "images/product6,8.jpg", category: "products",caption:"cheese cake"},
+    { src: "images/startegy.jpg", category: "others",caption:"clean desk, clear mind"},
+    { src: "images/hero.jpg", category: "products",caption:"ready to shoot"}
 ];
 let imageSources = [...allImages];
 let currentIndex = 0;
@@ -30,8 +31,9 @@ function updateImage() {
     setTimeout(() => {
         firstImg.src = imageSources[currentIndex].src;
         firstImg.style.opacity = 1;
+        document.getElementById('caption').textContent = imageSources[currentIndex].caption; 
         updateDots();
-    }, 300);
+        }, 300);
 }
 nextBtn.addEventListener('click', () => {
     if(imageSources.length === 0) return;
