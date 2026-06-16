@@ -17,10 +17,12 @@ body {
     max-width: 800px;
     overflow: hidden;
     border-radius: 10px;
-    flex: 1;
-    max-height: calc(100vh - 160px);
+    height: 450px;
     backdrop-filter: blur(10px);
-} 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #caption {
     font-size: 14px;
     color: rgba(255,255,255,0.7);
@@ -32,14 +34,16 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 #firstImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     transition: opacity 0.5s, transform 0.5s;
     opacity: 1;
     cursor: pointer;
 }
-#firstImg:active{
+#firstImg:active {
     transform: scale(1.1);
 }
 .Gallery:hover #firstImg {
@@ -65,18 +69,18 @@ body {
     background: rgba(79, 77, 77, 0.6);
     transform: translateY(-50%) scale(1.1);
 }
-.prev { 
+.prev {
     left: 10px;
 }
-.next { 
+.next {
     right: 10px;
 }
-h1{
+h1 {
     text-shadow: 0 0 10px rgba(229, 221, 221, 0.3);
     color: white;
     letter-spacing: 2px;
 }
-.dots{
+.dots {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -84,14 +88,14 @@ h1{
     display: flex;
     gap: 8px;
 }
-.dot{
+.dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: rgba(255,255,255,0.4);
     cursor: pointer;
 }
-.dot.active{
+.dot.active {
     background: white;
 }
 .filter-btn {
@@ -108,7 +112,7 @@ h1{
     color: #1e1e2f;
 }
 .lightbox {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -134,7 +138,7 @@ h1{
     font-weight: bold;
     cursor: pointer;
 }
-.category-filters{
+.category-filters {
     margin-top: 10px;
     margin-bottom: 15px;
     display: flex;
